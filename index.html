@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeShi</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/htmx/1.9.6/htmx.min.js"></script> -->
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>TypeShi</h1>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-label">Accuracy</div>
+                <div class="stat-value" id="accuracy">0%</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Attempts</div>
+                <div class="stat-value" id="attempts">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Target</div>
+                <div class="stat-value" id="target">75%</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Completion </div>
+                <div class="stat-value" id="mastered">0/X</div>
+            </div>
+        </div>
+
+
+        <div class="options-bar">
+            <div class="option-group">
+                <button class="option-btn active" data-group="mode" data-value="all">all</button>
+                <button class="option-btn" data-group="mode" data-value="alphanumeric">alphas</button>
+                <button class="option-btn" data-group="mode" data-value="alphanumeric">alphanumeric</button>
+                <button class="option-btn" data-group="mode" data-value="symbols">symbols</button>
+            </div>
+            
+            <div class="option-group">
+                <button class="option-btn active" data-group="length" data-value="short">short</button>
+                <button class="option-btn" data-group="length" data-value="medium">medium</button>
+                <button class="option-btn" data-group="length" data-value="long">long</button>
+                <button class="option-btn" data-group="length" data-value="extra">extra long</button>
+                <button class="option-btn" data-group="length" data-value="words">try-words</button>
+            </div>
+            
+            <div class="option-group">
+                <button class="option-btn active" data-group="accuracy" data-value="70">imprecise</button>
+                <button class="option-btn" data-group="accuracy" data-value="85">precise</button>
+                <button class="option-btn" data-group="accuracy" data-value="95">very precise</button>
+            </div>
+        </div>
+        
+       <div class="typing-area">
+            <div class="text-display" id="textDisplay">
+                the quick brown fox jumps over the lazy dog
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="rstBtn" class="rst-btn" title="Reset">⭮</button>
+            <button id="skipBtn" class="rst-btn" title="Skip current sequence">▶▶</button>
+        </div>
+    </div>
+
+    <script src="typeshi.min.js"></script>
+</body>
+</html>

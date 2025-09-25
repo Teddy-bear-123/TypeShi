@@ -1,0 +1,198 @@
+/* CSS Variables */
+:root {
+    --bg-color: #0b0e13;
+    --main-color: #60759f;
+    --caret-color: #60759f;
+    --sub-color: #394760;
+    --sub-alt-color: #141a24;
+    --text-color: #9fadc6;
+    --error-color: #c27070;
+    --error-extra-color: #c28b70;
+    --colorful-error-color: #c27070;
+    --colorful-error-extra-color: #c28b70;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Roboto Mono', 'Courier New', monospace;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.header h1 {
+    color: var(--text-color);
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.stat-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    gap: 6px;
+    font-size: 16px;
+}
+
+.stat-label {
+    color: var(--sub-color);
+    font-weight: 500;
+}
+
+.stat-value {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.options-bar {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.option-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.option-btn {
+    background: none;
+    border: none;
+    color: var(--sub-color);
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: color 0.2s ease;
+}
+
+.option-btn:hover {
+    color: var(--text-color);
+}
+
+.option-btn.active {
+    color: var(--main-color);
+}
+
+.typing-area {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-display {
+    font-size: 28px;
+    line-height: 1.8;
+    text-align: left;
+    padding: 0;
+    background: none;
+    border: none;
+    width: 100%;
+    color: var(--sub-color);
+    letter-spacing: 0.5px;
+    word-spacing: 4px;
+    cursor: text;
+    outline: none;
+}
+
+.char {
+    position: relative;
+}
+
+.char.correct {
+    color: var(--text-color);
+}
+
+.char.incorrect {
+    color: var(--error-color);
+    background-color: var(--error-extra-color);
+}
+
+.char.current {
+    background-color: var(--main-color);
+    color: var(--bg-color);
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+}
+
+.rst-btn {
+    padding: 12px 16px;
+    background: none;
+    border: none;
+    color: var(--sub-color);
+    font-family: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    border-radius: 4px;
+}
+
+.rst-btn:hover {
+    color: var(--text-color);
+}
+
+.rst-btn:active {
+    color: var(--main-color);
+}
+
+@media (max-width: 768px) {
+    .text-display {
+        font-size: 20px;
+        padding: 30px 15px;
+    }
+    
+    .container {
+        padding: 15px;
+        gap: 30px;
+    }
+    
+    .stats {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .options-bar {
+        gap: 20px;
+    }
+    
+    .option-group {
+        gap: 10px;
+    }
+}
